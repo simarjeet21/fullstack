@@ -1,0 +1,10 @@
+table,th,tr,td {
+  border: 2px solid green;
+  border-collapse: collapse;
+}
+form {
+  color: rgb(60, 60, 60);
+}
+.ini {
+  color: blue;
+}
