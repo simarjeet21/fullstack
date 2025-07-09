@@ -26,15 +26,16 @@
 
 .webpage{
     height: 700px;
+    width: 500px;
     background-color: beige;
     display: grid;
-    grid-template-rows: 300px 300px 300px;
-    grid-template-columns: 250px 600px;
+    grid-template-rows: 30px 1fr 30px;
+    grid-template-columns: 100px 400px;
 
     grid-template-areas: 
-    "hd hd hd hd "
-    "side  main main main"
-    "ft ft ft ft ";
+    "hd hd "
+    "side main"
+    "ft ft";
 }
 
 .area{
@@ -53,4 +54,17 @@
 }
 #footer{
     grid-area: ft;
+}
+
+@media(max-width:350px){
+    .webpage{
+        grid-template-rows: 30px 1fr 1fr 30px;
+        grid-template-columns: 1fr;
+
+        grid-template-areas: 
+        "hd"
+        "side" 
+        "main"
+        "ft"; 
+    }
 }
