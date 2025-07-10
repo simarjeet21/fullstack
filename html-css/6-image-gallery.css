@@ -20,7 +20,7 @@
 .container h1{
     margin: 20px 100px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 3rem;
 }
 
@@ -75,4 +75,39 @@
 .card:hover figcaption{
     opacity: 1;
     transform: scale(1.03);
+}
+
+.wrapper2{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    background-color: #e84949;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position: relative;
+    z-index: 1;
+}
+
+.button::before{
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute; /* before is to be overlapped so absolute and its nearest ancester that is button set position as non-static so relative*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.button:hover::before{
+    transform: scaleX(1);
 }
